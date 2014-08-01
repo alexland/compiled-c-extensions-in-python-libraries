@@ -6,12 +6,12 @@ _note:_ wrapper.c is generated via cython
 .
 +-- setup.py
 +-- proj_dir
-	+-- __init__.py
-	+-- wrapper.pyx
-	+-- wrapper.c
-	+-- lib
-		+-- cfunc.c
-		+-- cfunc.h
+|	+-- __init__.py
+|	+-- wrapper.pyx
+|	+-- wrapper.c
+|	+-- lib
+|		+-- cfunc.c
+|		+-- cfunc.h
 +-- README.md
 
 
