@@ -3,17 +3,18 @@ generic directory structure of a cython package:
 
 _note:_ wrapper.c is generated via cython
 
+<pre>
 .
 +-- setup.py
 +-- proj_dir
-|	+-- __init__.py
+|	+-- \__init\__.py
 |	+-- wrapper.pyx
 |	+-- wrapper.c
 |	+-- lib
 |		+-- cfunc.c
 |		+-- cfunc.h
 +-- README.md
-
+</pre>
 
 
 steps:
