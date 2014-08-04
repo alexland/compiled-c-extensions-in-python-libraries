@@ -1,20 +1,28 @@
 
 generic directory structure of a cython package:
 
-_note:_ wrapper.c is generated via cython
+
 
 <pre>
-.
-+-- setup.py
+top-level (distribution root)
+
 +-- proj_dir
-|	+-- \__init\__.py
+|	+-- __init__.py
 |	+-- wrapper.pyx
 |	+-- wrapper.c
 |	+-- lib
 |		+-- cfunc.c
 |		+-- cfunc.h
++-- setup.py
++--MANIFEST.in
++-- runner
 +-- README.md
 </pre>
+
+_note_ wrapper.c is generated via cython
+
+_note_ the importable module is created inside proj_dir, & is a .so file
+	which is imported like a normal python module
 
 
 steps:
@@ -50,7 +58,9 @@ to wrap a c function in a python package:
 
 4. put _pyx_ file same location as _lib_ dir
 
-5. reference in _setup.py_
+5. reference 
+
+6. ? reference in _setup.py_
 
 	i. 
 	
@@ -87,7 +97,7 @@ setup(name="compiled ext module I",
 
 ============
 
-method 2 (if no c-libraries required & no unusual build req)
+method 2 (if no C libraries required & no unusual build req)
 
 * create .pyx file
 
