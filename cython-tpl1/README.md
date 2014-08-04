@@ -46,11 +46,11 @@ steps:
 
 ========
 
-_to wrap a c function in a python package:_
+_to wrap c functions in a python package:_
 
-1. write the c function in a src file w/ a _c_ ext
+1. write the c functions in a src file w/ a _c_ ext
 
-2. write function prototype in a corresponding header file w/ _h_ ext
+2. write function prototypes in a corresponding header file w/ _h_ ext
 
 3. put both files in eg, a _lib_ directory
 
@@ -58,19 +58,11 @@ _to wrap a c function in a python package:_
 
 4. put _pyx_ file same location as _lib_ dir
 
-5. reference 
-
-6. ? reference in __init.py__
-
-	i. 
-	
-	ii. 
+5. reference in __init.py__
 
 
 
-
-
-building a cython extension from a .pyx file
+### building a cython extension from a .pyx file
 ======
 
 method 1
