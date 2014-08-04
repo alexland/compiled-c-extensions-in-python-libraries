@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-void hello() {
-	puts("hello world!");
-}
 
 int gcd(int x, int y) {
 	int g = y;
@@ -14,6 +11,16 @@ int gcd(int x, int y) {
 	}
 	return g;
 }
+
+double avg(double *a, int n) {
+	int i;
+	double total = 0.0;
+	for (i=0; i<n; i++) {
+		total += a[i];
+	}
+	return total/n;
+}
+
 
 
 

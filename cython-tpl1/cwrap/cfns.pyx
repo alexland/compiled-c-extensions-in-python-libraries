@@ -20,28 +20,11 @@ cdef extern from "lib/cfunc.h":
 	# extension definition in setup.py for proper compiling & linking
 	int gcd(int, int)
 	double avg(double *, int *)
-	int dv(int, int, int *)
 	
 
 def cgcd(unsigned int x, unsigned int y):
 	return gcd(x, y)
 	
-
-# @cython.boundscheck(False)
-# def cavg(double[:] a):
-# 	cdef:
-# 		int sz
-# 		double res
-# 	sz = a.size
-# 	res = avg(<double *> &a[0], sz)
-# 	return res
-
-
-def cdv(x, y):
-	cdef int rem
-	quot = dv(x, y, &rem)
-	return quot, rem 
-
 
 def factorial(int x):
 	# basic ex of cython fn, which defines python-like 
