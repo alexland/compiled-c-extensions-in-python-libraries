@@ -14,7 +14,7 @@ top-level (distribution root)
 |		+-- cfunc.c
 |		+-- cfunc.h
 +-- setup.py
-+--MANIFEST.in
++-- MANIFEST.in
 +-- runner
 +-- README.md
 </pre>
