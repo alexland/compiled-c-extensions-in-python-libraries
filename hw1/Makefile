@@ -1,5 +1,0 @@
-osx::
-	cython -3 -o hw.c hw.pyx
-	gcc `pkg-config --libs --cflags python3` -c hw.c -o hw.o
-	gcc -g -O2 -fpic -c hw.c -o hw.o `python-config --cflags`
-	gcc -g -O2 -shared -o hw.so hw.o `python-config --libs`
