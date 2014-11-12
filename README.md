@@ -4,10 +4,11 @@ generic directory structure of a cython package:
 
 
 <pre>
-top-level (distribution root)
+top-level (distribution root, aka entry points
 
 +-- proj_dir
 |	+-- __init__.py
+|   +-- __main__.py
 |	+-- wrapper.pyx
 |	+-- wrapper.c
 |	+-- lib
@@ -28,16 +29,16 @@ _note_ the importable module is created inside proj_dir, & is a .so file
 steps:
 
 ```
-    cd proj_dir    				# 1 level deep
+    cd proj_dir    							# 1 level deep
+```
+```	
+    cython wrapper.pyx  					# cythonize the C src, creates 'wrapper.c'
 ```
 ```
-    cython wrapper.pyx  		# cythonize the C src, creates 'wrapper.c'
+    cd ..									# go up to root dir
 ```
 ```
-    cd ..						# go up to root dir
-```
-```
-    python3 setup.py develop	# build python package 
+    python3 setup.py build_ext --inplace	# build python package 
 ```
 
 
