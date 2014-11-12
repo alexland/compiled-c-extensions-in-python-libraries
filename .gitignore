@@ -5,6 +5,9 @@ __pycache__/
 # C extensions
 *.so
 
+# ipython
+*.ipynb_checkpoints/
+
 # distribution / packaging
 .Python
 env/
@@ -22,11 +25,11 @@ var/
 .installed.cfg
 *.egg
 
-# Installer logs
+# installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# unit test / coverage reports
 htmlcov/
 .tox/
 .coverage
@@ -34,7 +37,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
-# Translations
+# translations
 *.mo
 
 # mr Developer
