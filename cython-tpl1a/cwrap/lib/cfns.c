@@ -26,5 +26,16 @@ double avg(double *a, int n) {
 	return total / n;
 }
 
+int dv(int a, int b, int *rem) {
+	int q = a / b;
+	*rem = a % b;
+	return q;
+}
+
+double ddv(double a, double b) {
+	double q = a / b;
+	return q;
+}
+
 
 

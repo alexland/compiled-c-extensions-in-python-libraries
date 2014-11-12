@@ -9,4 +9,5 @@ def pearson(a, b):
 	'''
 	'''
 	n = len(a)
-	count = range(n)
+	q = range(n)
+	

@@ -15,7 +15,7 @@ ctypedef NP.float_t DTYPE_t
 #   - c function that takes an ndarray and returns an ndarray "tesselation"
 
 
-cdef extern from "lib/cfunc.h":
+cdef extern from "lib/cfns.h":
 	# an extern Cython block--a declaration block to tell Cython
 	# which C-constructs we wish to use from a specific C header file
 	# imports definitions from a c header file
@@ -24,6 +24,8 @@ cdef extern from "lib/cfunc.h":
 	int gcd(int, int)
 	double k2c(double)
 	double avg(double *, int) nogil
+	int dv(int, int, int *)
+	double ddv(double, double)
 	
 	
 def cgcd(unsigned int x, unsigned int y):
@@ -55,7 +57,22 @@ def cavg(double[:] a):
 		result = avg(<double *> &a[0], sz)
 	return result
 
-	
+
+def cdv(a, b):
+	'''
+	shows how to handle a pointer argument; 
+	'''
+	cdef int rem0
+	q = dv(a, b, &rem0)
+	return q, rem0
+
+def cddv(double a, double b):
+	'''
+	'''
+	return ddv(a, b)
+	 
+
+
 # def factorial(int x):
 # 	# basic ex of cython fn, which defines python-like
 # 	# operations & control flow on defined c types

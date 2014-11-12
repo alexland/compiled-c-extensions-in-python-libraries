@@ -1,1 +1,1 @@
-from .cfns import cgcd, factorial, array_sum, tessellate
+from .cfns import cgcd, ck2c, cavg

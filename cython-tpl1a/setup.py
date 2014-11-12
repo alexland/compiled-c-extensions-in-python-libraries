@@ -9,7 +9,6 @@ arrayobject.h; on my mbp it is:
 Versions/3.4/lib/python3.4/site-packages/numpy/core/include/numpy
 '''
 
-
 NAME = "arraycomp"
 VERSION = "0.1"
 DESCR = "template for building python extensions that wrap C code via cython"
@@ -20,14 +19,14 @@ EMAIL = "doug.ybarbo@yahoo.com"
 
 LICENSE = "MIT"
 
-SRC_DIR = "cwrap"		# the name of the module when impored
+SRC_DIR = "cwrap"		# the name of the module when imported
 PACKAGES = [SRC_DIR]
 
 ext_1 = Extension(SRC_DIR + ".cfns",
-                  [SRC_DIR + "/lib/cfunc.c", SRC_DIR + "/cfns.pyx"],
-                  libraries=[],		# libs in stnd lib search path to link against
-				  library_dirs=[],	# if libraries above in non-stnd location
-				  runtime_library_dirs=[], # search for sharted libraries at runtime
+                  [SRC_DIR + "/lib/cfns.c", SRC_DIR + "/cfns.pyx"],
+                  libraries=[],					# libs in stnd lib search path to link against
+				  library_dirs=[],				# if libraries above in non-stnd location
+				  runtime_library_dirs=[], 		# search for sharted libraries at runtime
                   include_dirs=[NP.get_include()])
 
 EXTENSIONS = [ext_1]
